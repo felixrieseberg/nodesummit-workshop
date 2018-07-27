@@ -16,9 +16,7 @@ function createMenu() {
     })
   }
 
-  const menu = Menu.buildFromTemplate([{
-
-  }])
+  const menu = Menu.buildFromTemplate(template)
 
   Menu.setApplicationMenu(menu)
 }
