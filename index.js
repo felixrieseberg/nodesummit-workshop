@@ -1,4 +1,5 @@
 const { app, BrowserWindow } = require('electron')
+const { createMenu } = require('./menu')
 
 let myWindow
 
@@ -10,4 +11,6 @@ app.on('ready', () => {
     e.preventDefault()
     e.sender.send('open-file', url.slice(7))
   })
+
+  createMenu()
 })
