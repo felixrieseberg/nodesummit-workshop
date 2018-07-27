@@ -1,4 +1,4 @@
-const { Menu, app } = require('electron')
+const { Menu } = require('electron')
 const { openFile } = require('./files')
 
 function createMenu() {

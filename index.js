@@ -1,6 +1,8 @@
 const { app, BrowserWindow } = require('electron')
 const { createMenu } = require('./menu')
 
+const windows = []
+
 let myWindow
 
 app.on('ready', () => {
@@ -13,4 +15,14 @@ app.on('ready', () => {
   })
 
   createMenu()
+
+  windows.push(myWindow)
 })
+
+function getWindows() {
+  return windows;
+}
+
+module.exports = {
+  getWindows
+}
