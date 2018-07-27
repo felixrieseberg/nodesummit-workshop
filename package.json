@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "electron .",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,9 +21,26 @@
   },
   "homepage": "https://github.com/felixrieseberg/nodesummit-workshop#readme",
   "devDependencies": {
-    "electron": "^2.0.5"
+    "@electron-forge/cli": "^6.0.0-beta.22",
+    "@electron-forge/maker-dmg": "^6.0.0-beta.22",
+    "electron": "2.0.5"
   },
   "dependencies": {
     "monaco-loader": "^0.13.0"
+  },
+  "config": {
+    "forge": {
+      "makers": [
+        {
+          "name": "@electron-forge/maker-dmg",
+          "platforms": [ "darwin", "linux" ],
+          "config": {}
+        }
+      ],
+      "packagerConfig": {
+        "name": "Node Summit Editor",
+        "executableName": "nse"
+      }
+    }
   }
 }

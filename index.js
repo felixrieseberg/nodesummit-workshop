@@ -18,11 +18,3 @@ app.on('ready', () => {
 
   windows.push(myWindow)
 })
-
-function getWindows() {
-  return windows;
-}
-
-module.exports = {
-  getWindows
-}
