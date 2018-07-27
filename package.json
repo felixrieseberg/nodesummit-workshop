@@ -20,5 +20,8 @@
   "homepage": "https://github.com/felixrieseberg/nodesummit-workshop#readme",
   "devDependencies": {
     "electron": "^2.0.5"
+  },
+  "dependencies": {
+    "monaco-loader": "^0.13.0"
   }
 }
