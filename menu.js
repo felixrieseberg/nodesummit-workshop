@@ -1,17 +1,16 @@
 const { Menu, app } = require('electron')
 
 function createMenu() {
-  let template = [{
-    label: 'Hello'
-  }]
+  let template = [
+    { role: 'editMenu' },
+    { role: 'windowMenu' }
+  ]
 
   if (process.platform === 'darwin') {
     template.unshift({
       label: 'Code Editor',
       submenu: [{
-        label: 'Quit',
-        accelerator: 'CmdOrCtrl+Q',
-        click: () => app.quit()
+        role: 'quit'
       }]
     })
   }
