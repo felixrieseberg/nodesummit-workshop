@@ -1,7 +1,18 @@
 const { Menu, app } = require('electron')
+const { openFile } = require('./files')
 
 function createMenu() {
   let template = [
+    {
+      label: 'File',
+      submenu: [
+        {
+          label: 'Open File',
+          accelerator: 'CmdOrCtrl+O',
+          click: openFile
+        }
+      ]
+    },
     { role: 'editMenu' },
     { role: 'windowMenu' }
   ]
